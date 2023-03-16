@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navigation</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -33,7 +33,7 @@
             <i class="fa fa-bars menuToggle"></i>
         </div>
         <div class="searchBox">
-            <input type="text" placeholder="Search here...">
+            <input type="text" placeholder="Search here . .">
         </div> 
     </header>
     <script>
@@ -43,6 +43,7 @@
         let header =document.querySelector('header');
         let navigation =document.querySelector('.navigation');
         let menuToggle =document.querySelector('.menuToggle');
+        
 
         searchBtn.onclick = function(){
             searchBox.classList.add('active');
