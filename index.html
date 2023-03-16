@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <div class="group">
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="search">
+                <span class="icon">
+                    <i class="fa fa-search  searchBtn " aria-hidden="true"></i>
+                    <i class="fa fa-close closeBtn" aria-hidden="true"></i>
+                </span>
+            </div>  
+            <i class="fa fa-bars menuToggle"></i>
+        </div>
+        <div class="searchBox">
+            <input type="text" placeholder="Search here...">
+        </div> 
+    </header>
+    <script>
+        let searchBtn = document.querySelector('.searchBtn');
+        let closeBtn = document.querySelector('.closeBtn');
+        let searchBox = document.querySelector('.searchBox');
+        let header =document.querySelector('header');
+        let navigation =document.querySelector('.navigation');
+        let menuToggle =document.querySelector('.menuToggle');
+
+        searchBtn.onclick = function(){
+            searchBox.classList.add('active');
+            closeBtn.classList.add('active');
+            searchBtn.classList.add('active');
+            menuToggle.classList.add('hide');
+            header.classList.remove('open');
+        }
+        closeBtn.onclick = function(){
+            searchBox.classList.remove('active')
+            closeBtn.classList.remove('active')
+            searchBtn.classList.remove('active');
+            menuToggle.classList.remove('hide');
+        }
+        menuToggle.onclick = function(){
+            header.classList.toggle('open');
+            searchBox.classList.remove('active')
+            closeBtn.classList.remove('active')
+            searchBtn.classList.remove('active');
+            
+        }
+    </script>
+</body>
+
+</html>
